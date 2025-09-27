@@ -103,7 +103,7 @@ none.
 ### Solve
 **Flag:** pwn.college{gvhFatYYfemcqTocqZlFQ3x1MjM.QX2EDO0wSO4EzNzEzW}
 
-use man comand to bring up the manual page for the challenge command, searched for the keyword: flag using '/' and then navigated through the manual page using n and shift n (N) till i found it .
+use man man to bring up information about man pages and what commands to use to find them, used google gemini to strengthen my knowldge on commands on manpages and how to use them, found out from these sources about the -k command and used it with keyword 'challenge' or 'flag' to get the required manpage i want and opened the manpage with man command to find the code to execute the program and obtained the flag .
 
 ```
 hacker@man~searching-for-manuals:~$ man man
@@ -132,10 +132,10 @@ Correct usage! Your flag: pwn.college{gvhFatYYfemcqTocqZlFQ3x1MjM.QX2EDO0wSO4EzN
 ```
 
 ### New Learnings
-learnt to navigate through the manual pages quickly using n and N and / and ?.
+learnt about different commands to find manpages.
 
 ### References 
-none.
+google gemini.
 
 
 ## Helpful Programs
@@ -144,7 +144,7 @@ none.
 ### Solve
 **Flag:** pwn.college{EXuX-ZmvZYTb0KWB1b1Wzu8uy1m.QX3IDO0wSO4EzNzEzW}
 
-use speciala rgyment --help for the program /challenge/challenge/ to get help page where it describes what arguments to use in order to obtain the flag, here i have to use an argument to print a value which ill have to use in another argument to get the flag .
+use special argument --help for the program /challenge/challenge/ to get help page where it describes what arguments to use in order to obtain the flag, here i have to use an argument to print a value which ill have to use in another argument to get the flag .
 
 ```
 hacker@man~helpful-programs:~$ /challenge/challenge --help

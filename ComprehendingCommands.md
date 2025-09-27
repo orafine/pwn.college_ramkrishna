@@ -494,3 +494,98 @@ learnt how to make directories, got more comfortable with touch command.
 
 ### References 
 none.
+
+
+## Finding Files
+ learn command to files in directories
+
+### Solve
+**Flag:** pwn.college{oGGxgHZ9a57ZdgNq1Jncbt3GXWo.QXxMDO0wSO4EzNzEzW}
+
+made pwn directory in the tmp directory using mkdir command and entered into it using cd and made college file using touch command.
+
+```
+hacker@commands~finding-files:~$ cd /
+hacker@commands~finding-files:/$ find -name flag
+find: ‘./root’: Permission denied
+find: ‘./proc/1/task/1/fd’: Permission denied
+find: ‘./proc/1/task/1/fdinfo’: Permission denied
+find: ‘./proc/1/task/1/ns’: Permission denied
+find: ‘./proc/1/fd’: Permission denied
+find: ‘./proc/1/map_files’: Permission denied
+find: ‘./proc/1/fdinfo’: Permission denied
+find: ‘./proc/1/ns’: Permission denied
+find: ‘./proc/7/task/7/fd’: Permission denied
+find: ‘./proc/7/task/7/fdinfo’: Permission denied
+find: ‘./proc/7/task/7/ns’: Permission denied
+find: ‘./proc/7/fd’: Permission denied
+find: ‘./proc/7/map_files’: Permission denied
+find: ‘./proc/7/fdinfo’: Permission denied
+find: ‘./proc/7/ns’: Permission denied
+find: ‘./var/log/private’: Permission denied
+find: ‘./var/log/apache2’: Permission denied
+find: ‘./var/log/mysql’: Permission denied
+find: ‘./var/cache/ldconfig’: Permission denied
+find: ‘./var/cache/apt/archives/partial’: Permission denied
+find: ‘./var/cache/private’: Permission denied
+find: ‘./var/lib/apt/lists/partial’: Permission denied
+find: ‘./var/lib/php/sessions’: Permission denied
+find: ‘./var/lib/mysql-files’: Permission denied
+find: ‘./var/lib/private’: Permission denied
+find: ‘./var/lib/mysql-keyring’: Permission denied
+find: ‘./var/lib/mysql’: Permission denied
+find: ‘./tmp/tmp.4mK6TfTSUV’: Permission denied
+find: ‘./run/mysqld’: Permission denied
+find: ‘./run/sudo’: Permission denied
+find: ‘./etc/ssl/private’: Permission denied
+./usr/local/lib/python3.8/dist-packages/terminado-0.18.1.dist-info/licenses/flag
+./usr/local/lib/python3.8/dist-packages/pwnlib/flag
+./opt/pwndbg/.venv/lib/python3.8/site-packages/pwnlib/flag
+./nix/store/7ns27apnvn4qj4q5c82x0z1lzixrz47p-radare2-5.9.8/share/radare2/5.9.8/flag
+./nix/store/5z3sjp9r463i3siif58hq5wj5jmy5m98-python3.12-pwntools-4.13.1/lib/python3.12/site-packages/pwnlib/flag
+./nix/store/5n5lp1m8gilgrsriv1f2z0jdjk50ypcn-rizin-0.7.3/share/rizin/flag
+./nix/store/bnlabj2vsbljhp597ir29l51nrqhm89w-rizin-0.7.4/share/rizin/flag
+./nix/store/s8b49lb0pqwvw0c6kgjbxdwxcv2bp0x4-radare2-5.9.8/share/radare2/5.9.8/flag
+./nix/store/1hyxipvwpdpcxw90l5pq1nvd6s6jdi5m-python3.12-pwntools-4.14.1/lib/python3.12/site-packages/pwnlib/flag
+./nix/store/h88mxp2mbgyj06vypwmqpy05idhwimnp-python3.13-pwntools-4.14.1/lib/python3.13/site-packages/pwnlib/flag
+./nix/store/5qz6hgb1qzpvjrsw20wyiylx5zw8b9bk-pwntools-4.14.0/lib/python3.13/site-packages/pwnlib/flag
+hacker@commands~finding-files:/$ cat ./usr/local/lib/python3.8/dist-packages/terminado-0.18.1.dist-info/licenses/flag 
+pwn.college{M_TiPei2XXJ-dg9xxG159hiBP-j.QXyMDO0wSO4EzNzEzW
+
+```
+
+### New Learnings
+learnt where to use find command and also learnt to use find -name flag 2>/dev/null to get rid of the error messages making the code more clear.
+
+### References 
+google gemini.
+
+
+
+## Linking Files
+ learn to link files
+
+### Solve
+**Flag:** pwn.college{wChOSl34__Kd5FgQ08RL1f4QLHu.QX5ETN1wSO4EzNzEzW}
+
+removed the not-the-flag file at first which is the one being read out, linked the actual flag to not-the-flag and read it out tricking it into giving us the flag.
+
+```
+hacker@commands~linking-files:~$ /challenge/catflag 
+About to read out the /home/hacker/not-the-flag file!
+cat: /home/hacker/not-the-flag: No such file or directory
+hacker@commands~linking-files:~$ rm /home/hacker/not-the-flag
+rm: cannot remove '/home/hacker/not-the-flag': No such file or directory
+hacker@commands~linking-files:~$ ln -s /flag /home/hacker/not-the-flag
+hacker@commands~linking-files:~$ /challenge/catflag 
+About to read out the /home/hacker/not-the-flag file!
+pwn.college{wChOSl34__Kd5FgQ08RL1f4QLHu.QX5ETN1wSO4EzNzEzW}
+
+```
+
+### New Learnings
+learnt how to link files.
+
+### References 
+none.
+

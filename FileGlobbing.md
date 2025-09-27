@@ -6,7 +6,7 @@
 ### Solve
 **Flag:** pwn.college{8OfVdC50gi4D7bViXXs0-XssGXK.QXxIDO0wSO4EzNzEzW}
 
-.
+used * to autofill the file name and run it to get the flag.
 
 ```
 hacker@globbing~matching-with-:~$ cd /c*

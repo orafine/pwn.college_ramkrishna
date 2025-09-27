@@ -1,22 +1,23 @@
 
 # Linux Luminarium-Hello Hackers 
 
-## Challenge Name
-Add challenge description here
+## Intro to Commands
+ Entering the first command.
 
 ### Solve
-**Flag:** `pwn.college{helloworld}`
+**Flag:** pwn.college{sbF8VJ9nKAOaVrcyn67_hpmCO5t.QX3YjM1wSO4EzNzEzW}
 
-type in your solve and your thought process behind solving the challenge. Include as much as info as possible. Use triple ticks for any bash commands and output you type on the terminal.
+entered a command into the terminal and got a response.
 
-```bash
-command 1
-command 2
-pwn.college{helloworld}
+```
+hacker@hello~intro-to-commands:~$ hello
+Success! Here is your flag:
+pwn.college{sbF8VJ9nKAOaVrcyn67_hpmCO5t.QX3YjM1wSO4EzNzEzW}
+
 ```
 
 ### New Learnings
-Brief note on what you learned from the challenge
+to enter a command into a linux terminal.
 
 ### References 
-Add any references or videos you used while solving the challenge.
+none.

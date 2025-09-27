@@ -1,4 +1,4 @@
-# Linux Luminarium-File Globbing 
+ # Linux Luminarium-File Globbing 
 
 ## Matching with *
  using * command.
@@ -158,25 +158,120 @@ none.
 
 
 ## Mixing Globs
- using multiple glob com.
+
 
 ### Solve
-**Flag:** pwn.college{wQN1M1NIjcZk1xsRbyOD-mNFrn7.0lM3kjNxwSO4EzNzEzW}
+**Flag:** pwn.college{gm_hMNw4ngUOwwTywZnCnz5-ADG.QX1IDO0wSO4EzNzEzW}
 
-got into challenge/files directory normally run /challenge/run with *p* as argument to run all files .
+got into challenge/files directory normally run /challenge/run with [cep]* as argument as c,e and p are unique starting points for the files and * autocmpletes the names of these files.
 
 ```
-hacker@globbing~multiple-globs:~$ cd /challenge/files/
-hacker@globbing~multiple-globs:/challenge/files$ /challenge/run /*p*
-Error: your argument is too long! It must be 3 characters or less.
-hacker@globbing~multiple-globs:/challenge/files$ /challenge/run *p*
+hacker@globbing~mixing-globs:~$ cd /challenge/files/
+hacker@globbing~mixing-globs:/challenge/files$ /challenge/run [cep]*
 You got it! Here is your flag!
-pwn.college{wQN1M1NIjcZk1xsRbyOD-mNFrn7.0lM3kjNxwSO4EzNzEzW}
+pwn.college{gm_hMNw4ngUOwwTywZnCnz5-ADG.QX1IDO0wSO4EzNzEzW}
 ```
 
 ### New Learnings
-how multiple globbing works and the process behind it, here the '*' before p fills the letters before the letter p in the file and the '*' after p fills all the letter afters so therefore all the files with the letter p are mentioned.
+learnt how to mix globs so addressing files are way more efficient now.
 
 ### References 
 none.
 
+
+
+## Exclusionary Globbing
+
+
+### Solve
+**Flag:** pwn.college{ABXdGdlw1sc0AsbubCgc7XiZQnJ.QX2IDO0wSO4EzNzEzW}
+
+got into challenge/files directory normally run /challenge/run with [!pwn]* as argument where !pwn part excludes all files starting with p,w, and n and the * completes the name of the rest of the files.
+
+```
+hacker@globbing~exclusionary-globbing:~$ cd /challenge/files/
+hacker@globbing~exclusionary-globbing:/challenge/files$ /challenge/run file_[!pwn]
+Error: your argument is too long! It must be 8 characters or less.
+hacker@globbing~exclusionary-globbing:/challenge/files$ /challenge/run *[!pwn]
+Your expansion did not expand to the requested files (amazing beautiful 
+challenging delightful educational fantastic great happy incredible jovial kind 
+laughing magical optimistic queenly radiant splendid thrilling uplifting 
+victorious xenial youthful zesty).
+Instead, it expanded to:
+amazing beautiful challenging delightful educational fantastic great happy incredible jovial kind laughing magical nice optimistic pwning queenly radiant splendid thrilling uplifting victorious wonderful xenial youthful zesty
+hacker@globbing~exclusionary-globbing:/challenge/files$ /challenge/run [!pwn]*
+You got it! Here is your flag!
+pwn.college{ABXdGdlw1sc0AsbubCgc7XiZQnJ.QX2IDO0wSO4EzNzEzW}
+```
+
+### New Learnings
+learnt how to exclude the files you dont want using glob and also the learnt importance of ordering the glob commands.
+
+### References 
+none.
+
+
+
+## Tab Completion
+tab button to autofill.
+
+### Solve
+**Flag:** pwn.college{Mt52dIsVHGYUf_b8SJMRt65NJ1c.0FN0EzNxwSO4EzNzEzW}
+
+used cat command and used tab to autofill the name of the directories to be quicker.
+
+```
+hacker@globbing~tab-completion:~$ cat /challenge/pwncollege​ 
+pwn.college{Mt52dIsVHGYUf_b8SJMRt65NJ1c.0FN0EzNxwSO4EzNzEzW}
+```
+
+### New Learnings
+i already knew this.
+
+### References 
+none.
+
+
+## Mulitple Options for tab completion
+different uses for tab button
+
+### Solve
+**Flag:** pwn.college{w7bjaGJPmFNu4Qe77EYJq0X2HKg.0lN0EzNxwSO4EzNzEzW}
+
+used cat command and used tab to autofill the name of the directories, when it came to a point where the files had same initial letters, pressed tab again to view them and select the one i required to get the key.
+
+```
+hacker@globbing~multiple-options-for-tab-completion:~$ cat /challenge/files/pwn
+pwn                    pwn-the-planet         pwncollege-flag        pwncollege-flyswatter  
+pwn-college            pwncollege-family      pwncollege-flamingo    pwncollege-hacking     
+hacker@globbing~multiple-options-for-tab-completion:~$ cat /challenge/files/pwncollege-flag
+pwn.college{w7bjaGJPmFNu4Qe77EYJq0X2HKg.0lN0EzNxwSO4EzNzEzW}
+```
+
+### New Learnings
+learnt more deeper funnctions of using the tab key.
+
+### References 
+none.
+
+
+
+## Tab completion on commands
+autofilling of commands.
+
+### Solve
+**Flag:** pwn.college{gL6i2tDlTcHrdMl_J62iw7Lmzy4.0VN0EzNxwSO4EzNzEzW}
+
+typed in pwncollege and used tab autofill to ge the rest of the command and obtain the flag.
+
+```
+hacker@globbing~tab-completion-on-commands:~$ pwncollege-20765 
+Correct! Here is your flag:
+pwn.college{gL6i2tDlTcHrdMl_J62iw7Lmzy4.0VN0EzNxwSO4EzNzEzW}
+```
+
+### New Learnings
+learnt you can use tab completion on commands.
+
+### References 
+none.

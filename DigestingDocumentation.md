@@ -1,6 +1,6 @@
 # Linux Luminarium- Digesting Documentation
 
-##Learning from Documentation
+## Learning from Documentation
  using cat command.
 
 ### Solve
@@ -21,7 +21,7 @@ pwn.college{0LIQTcUKDyGfkxWnA02EXjqmnq8.QX0ITO0wSO4EzNzEzW}
 none.
 
 
-##Learning Complex Usage
+## Learning Complex Usage
  
 
 ### Solve
@@ -43,7 +43,7 @@ learnt about programs and its arguments in this type of case.
 google gemini.
 
 
-##Reading Manuals
+## Reading Manuals
  manual pages about commands.
 
 ### Solve
@@ -97,7 +97,7 @@ learnt to navigate through the manual pages quickly using n and N and / and ?.
 none.
 
 
-##Searching For Manuals
+## Searching For Manuals
   commands to search for manual pages.
 
 ### Solve
@@ -138,7 +138,7 @@ learnt to navigate through the manual pages quickly using n and N and / and ?.
 none.
 
 
-##Helpful Programs
+## Helpful Programs
   special argument for programs without man pages.
 
 ### Solve
@@ -173,7 +173,7 @@ learnt about special argyment --help which i can use for programs without man pa
 none.
 
 
-##Help for Builtins
+## Help for Builtins
   builtin commands and how the shell handles them.
 
 ### Solve
